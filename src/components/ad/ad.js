@@ -29,6 +29,7 @@ function Card(props) {
             </div>
             <div class="card-content">
               <p><span>Description: </span>{card.mPersonDescription}</p>
+              <p><span>Target Contact: </span>{(card.referenceId || {}).contact}</p>
             </div>
             <div class="card-action">
               <a><span>Age: </span>{card.mPersonAge}</a>
