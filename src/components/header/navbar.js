@@ -24,7 +24,7 @@ function NavBar(props){
               name: evt.target.value
             })
             let data={
-              mPersonName:searchName.name,
+              mPersonName:evt.target.value,
             }
             console.log(data.mPersonName);
             let resp = await axios.post(window.ip+'/search',data);
