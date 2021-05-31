@@ -1,0 +1,12 @@
+.flow{
+  overflow: auto !important;
+}
+
+.adjust-flex {
+  width: 300px;
+  margin: 10px;
+}
+
+.card .card-image img{
+  max-height: 250px;
+}

@@ -1,0 +1,70 @@
+.adjust{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+.adjust-flex{
+    width: 250px;
+    margin: 10px;
+}
+img{
+    width: 200px;
+    height: 400px;  
+}
+.btn-del{
+    float: right;
+    margin-top: -7px;
+    margin-left:1%;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+    color: #2b7299;
+    font-weight: bold;
+}
+.card .card-content p {
+    font-weight: bold;
+}
+.card .card-image .card-title {
+    font-weight: bold;
+}
+@media only screen and (max-width: 900px) {
+    /* .adjust-flex{
+        width: %;
+        margin: 10px;
+    } */
+    .btn-small {
+        
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    /* .adjust-flex{
+        width: 90%;
+        margin: 10px;
+    } */
+    .btn-small {
+        
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    /* .adjust-flex{
+        width: 90%;
+        margin: 10px;
+    } */
+    .btn-small {
+        
+        font-size: 9px;
+    }
+}
+@media only screen and (max-width: 276px) {
+    /* .adjust-flex{
+        width: 95%;
+        margin: 10px;
+    } */
+    .btn-small {
+        
+        font-size: 8px;
+    }
+}
