@@ -30,7 +30,7 @@ let mongoose = require('mongoose');
 let SiteUsers = require('./db/models/users');
 let MissingPersons = require('./db/models/missingPersons');
 
-mongoose.connect('mongodb+srv://Nabiha:1716221nabiha@cluster0.vxl4h.mongodb.net/FYP?retryWrites=true&w=majority', (err, connection) => {
+mongoose.connect('mongodb+srv://maliraza:Pakistan123@cluster0.oh3c8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', (err, connection) => {
     console.log(err || connection);
 });
 
