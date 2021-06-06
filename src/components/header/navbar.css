@@ -78,10 +78,169 @@ nav{
     color: rgb(213, 236, 206);
     font-size: 20px;
   }
-  .user{
+  .blink{
+    animation-name:effect ;
     
-
+    animation-duration:  2s;
+    animation-iteration-count: infinite;
+  
+    /* animation-duration: infinite; */
   }
+  @keyframes effect {
+    
+    0%  {opacity: 1;}
+    30%   {opacity: 0;}
+    60%   {opacity: 1;}
+    80%   {opacity: 0;}
+    100%  {opacity: 1;}
+    
+  }
+  .title{
+    margin: 10px;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(213, 236, 206);
+    color: rgb(23, 49, 17);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+
+.tocenterimg{
+  height: 64px;
+  position: relative;
+
+}
+.imgcontrol{
+
+  max-height: 40px;
+  max-width: 65px;
+ position: relative;
+ top: 11px;
+}
+@media only screen and (max-width: 1480px) {
+  .title{
+     
+    padding-left: 18%;
+    padding-right: 18%;
+   
+  }
+}
+@media only screen and (max-width: 1385px) {
+  .title{
+     
+    padding-left: 17%;
+    padding-right: 17%;
+   
+  }
+}
+@media only screen and (max-width: 1343px) {
+  .title{
+     
+    padding-left: 16%;
+    padding-right: 16%;
+   
+  }
+}
+@media only screen and (max-width: 1303px) {
+  .title{
+     
+    padding-left: 15%;
+    padding-right: 15%;
+   
+  }
+}
+@media only screen and (max-width: 1265px) {
+  .title{
+     
+    padding-left: 13%;
+    padding-right: 13%;
+   
+  }
+}
+@media only screen and (max-width: 1192px) {
+  .title{
+     
+    padding-left: 11%;
+    padding-right: 11%;
+   
+  }
+}
+@media only screen and (max-width: 1130px) {
+  .title{
+     
+    padding-left: 9%;
+    padding-right: 9%;
+   
+  }
+}
+@media only screen and (max-width: 1074px) {
+  .title{
+     
+    padding-left: 7%;
+    padding-right: 7%;
+   
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .title{
+     
+    padding-left: 5%;
+    padding-right: 5%;
+   
+  }
+}
+@media only screen and (max-width: 993px) {
+  .title{
+     
+    padding-left: 18%;
+    padding-right: 18%;
+   
+  }
+}
+@media only screen and (max-width: 817px) {
+  .title{
+     
+    padding-left: 15%;
+    padding-right: 15%;
+   
+  }
+}
+@media only screen and (max-width: 745px) {
+  .title{
+     
+    padding-left: 12%;
+    padding-right: 12%;
+   
+  }
+}
+@media only screen and (max-width: 686px) {
+  .title{
+     
+    padding-left: 10%;
+    padding-right: 10%;
+   
+  }
+}
+@media only screen and (max-width: 651px) {
+  .title{
+     
+    padding-left: 8%;
+    padding-right: 8%;
+   
+  }
+}
+@media only screen and (max-width: 620px) {
+  .title{
+     
+    padding-left: 6%;
+    padding-right: 6%;
+   
+  }
+}
   
   @media only screen and (max-width: 600px) {
     input.search-field {
@@ -108,7 +267,19 @@ nav{
       width: 100%;
       padding: 8px 8px;
     }
-  
+    .title{
+     
+      padding-left: 2%;
+      padding-right: 2%;
+     
+    }
+  }
+
+@media only screen and (max-width: 541px) {
+  .title{
+     
+   display: none;
    
   }
+}
   
