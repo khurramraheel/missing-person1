@@ -1,0 +1,35 @@
+.post-comment-btn{
+    padding-left: 25px;
+    background: skyblue;
+    color: black;
+    padding-right: 25px;
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.marker{
+    width:50px;
+    height:50px;
+}
+
+.comment-row{
+    background-color: #f8f5f5;
+    padding: 17px;
+    margin: 11px;
+    border-radius: 18px;
+}
+
+.phone-icon{
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.delete-icon{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 11px;
+    left: auto;
+    top: 11px;
+}

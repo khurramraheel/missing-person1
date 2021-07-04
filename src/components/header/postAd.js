@@ -3,21 +3,41 @@ import './postad.css';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import { connect } from 'react-redux';
-import { useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import {toast} from 'react-toastify';
+
 function PostAd(props) {
    let navigate = useNavigate();
    const { register, handleSubmit, watch, errors } = useForm();
    const onSubmit = async (data) => {
+
+      data.id = props.SiteUserReducer.siteUser._id;
+
       data.missingPic = data.missingPic[0]
       let fm = new FormData();
       for (let item in data) {
          fm.append(item, data[item])
       }
-      let resp = await axios.post(window.ip+'/postad', fm,);
-      navigate('/');
+
+      navigator.geolocation.getCurrentPosition(async (pos) => {
+
+         var crd = pos.coords;
+
+         fm.append('latitude', crd.latitude);
+         fm.append('longitude', crd.longitude);
+
+         let resp = await axios.post(window.ip + '/postad', fm);
+         navigate('/');
+
+      }, (error) => {
+
+         toast.error("Please allow location to proceed!");
+
+      });
+
    };
-   return <> 
-      { localStorage.getItem('token') ? <div className='full'>
+   return <>
+      {localStorage.getItem('token') ? <div className='full'>
          <div className='container'>
             <div>
                <center>
@@ -66,7 +86,7 @@ function PostAd(props) {
                      </div>
                      <center>
                         <button class="btn waves-effect waves-light" type="submit" >Post
-                        <i class="material-icons right">send</i>
+                           <i class="material-icons right">send</i>
                         </button>
                      </center>
                   </form>
@@ -74,11 +94,11 @@ function PostAd(props) {
             </div>
          </div>
       </div> :
-      navigate('/')
-     
-       }
-      </>
-   }
-   export default connect((myStore) => {
-      return myStore;
-   })(PostAd);
+         navigate('/')
+
+      }
+   </>
+}
+export default connect((myStore) => {
+   return myStore;
+})(PostAd);

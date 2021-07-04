@@ -30,12 +30,13 @@ function NavBar(props) {
             console.log(resp.data);
           }}
         />
-       
-        <span className='title'>
 
-          <span> <img className='imgcontrol' src="/person.png" /> The Person Finder</span>
-        </span>
-        
+        <Link to="/">
+          <span className='title'>
+            <span> <img className='imgcontrol' src="/person.png" /> The Person Finder</span>
+          </span>
+        </Link>
+
         <a onClick={() => {
           var drawer = M.Sidenav.init(document.querySelectorAll('.sidenav'), {});
         }} data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>

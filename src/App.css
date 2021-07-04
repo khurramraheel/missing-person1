@@ -7,6 +7,36 @@
   margin: 10px;
 }
 
+span.title{
+  background: rgb(154 218 255);
+}
+
+.share-btn a{
+  color:white !important;
+}
+
+.share-btn{
+  position: absolute;
+  top:0;
+  bottom:0;
+  right:0;
+}
+
+.f-left{
+  float: right;
+  color: magenta;
+}
+
+.c-title{
+  color: blue;;
+}
+
+.text-right{
+  text-align: right;
+  position:relative;
+  right:10px;
+}
+
 .card .card-image img{
   max-height: 250px;
 }

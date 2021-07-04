@@ -9,28 +9,11 @@ import axios from 'axios';
 import './App.css';
 import UpdateAd from './components/content/updateAd';
 import SinglePerson from './components/ad/ad';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
-  return (
-    <Router className='flow'>
-      <Provider store={myStore}>
-        <Route exact path='/'/>
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/detail/:_id' element={<SinglePerson/>}/>
-          <Route path='/updatead/:id' element={<UpdateAd/>} />
-          <Route path='/postad' element={<PostAd/>} />
-          <Route path='*' element={<Nothing/>}/>
 
-        </Routes>
-        
-      </Provider>
-    </Router>
-  );
-}
-
-function Home(){
-  let [cards, setCards] = useState([]);
 
   useEffect(async () => {
     let token= localStorage.getItem('token');
@@ -48,6 +31,29 @@ function Home(){
       }
     }
   }, [])
+
+  return (
+    <Router className='flow'>
+      <Provider store={myStore}>
+        <Route exact path='/'/>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/detail/:_id' element={<SinglePerson/>}/>
+          <Route path='/updatead/:id' element={<UpdateAd/>} />
+          <Route path='/postad' element={<PostAd/>} />
+          <Route path='*' element={<Nothing/>}/>
+
+        </Routes>
+        
+      </Provider>
+      <ToastContainer />
+    </Router>
+  );
+}
+
+function Home(){
+  let [cards, setCards] = useState([]);
+
   return<div>
     <NavBar  setCards={setCards} />
     <Cards  setCards={setCards} cards={cards} />
